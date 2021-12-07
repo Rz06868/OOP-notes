@@ -52,8 +52,7 @@ public:
         height = height1;
     }
 
-    // Function to display the dimensions
-    // of the Box object
+    // Function to display the dimensions of the Box object
     void show_data()
     {
         cout << "Length = " << length << endl
@@ -72,17 +71,21 @@ int main()
     B1.set_dimensions(14, 12, 16);
     B1.show_data();
 
-    // When copying the data of object
-    // at the time of initialization
-    // then copy is made through
-    // COPY CONSTRUCTOR
+    /*
+    When copying the data of object
+    at the time of initialization
+    then copy is made through
+    COPY CONSTRUCTOR
+    */
     box B2 = B1;
     B2.show_data();
 
-    // When copying the data of object
-    // after initialization then the
-    // copy is done through DEFAULT
-    // ASSIGNMENT OPERATOR
+    /*
+    When copying the data of object
+    after initialization then the
+    copy is done through DEFAULT
+    ASSIGNMENT OPERATOR
+    */
     B3 = B1;
     B3.show_data();
 
