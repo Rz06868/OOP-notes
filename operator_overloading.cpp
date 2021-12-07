@@ -63,6 +63,8 @@ public:
 
     friend void testFunction(Counter);
     friend void operator-=(Counter, int);
+    friend ostream &operator<<(ostream &, Counter);
+    friend istream &operator>>(istream &, Counter);
 };
 
 void testFunction(Counter C)
@@ -73,6 +75,26 @@ void testFunction(Counter C)
 void operator-=(Counter C, int x)
 {
     C.count -= x;
+}
+
+ostream &operator<<(ostream &out, Counter C)
+/*
+show() works same as cout for Counter objects,
+we can also overload the cout operator.
+cout is the object of ostream class,
+we have to pass it by refernce otherwise compiler won't compile
+*/
+{
+    cout << C.count;
+    return out;
+}
+
+istream &operator>>(istream &in, Counter C)
+{
+    int x;
+    cin >> x;
+    C.count = x;
+    return in;
 }
 
 int main()
@@ -105,5 +127,8 @@ int main()
     c1 += C;
 
     c1.show();
+
+    cout << "c1 count from cout << operator: ";
+    cout << c1;
     return 0;
 }
