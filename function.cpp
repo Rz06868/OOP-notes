@@ -1,13 +1,12 @@
 #include <iostream>
-using namespace std;
 
 void printLine()
 {
     for (int i = 0; i < 10; i++)
     {
-        cout << "*";
+        std::cout << "*";
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
 // most of the time the funciton is decleared in header files
@@ -69,7 +68,7 @@ C++) resolve this in different ways.
 
 inline void sayHello()
 {
-    cout << "Hello Peter" << endl;
+    std::cout << "Hello Peter" << std::endl;
 }
 
 /*
@@ -77,7 +76,7 @@ ordinary definiton of the very same function
 
 void sayHello()
 {
-    cout << "Hello Peter" << endl;
+    std::cout << "Hello Peter" << std::endl;
 }
 */
 
@@ -115,19 +114,19 @@ void printMeasuremnt(Distance d, char feetSymbol, char inchesSymbol)
 
 void printMeasuremnt(Distance d)
 {
-    cout << "The measurment is: " << d.feet
-         << "'" << d.inches << "\"" << endl;
+    std::cout << "The measurment is: " << d.feet
+              << "'" << d.inches << "\"" << std::endl;
 }
 
 void printMeasuremnt(int inches)
 {
-    cout << "The measurment is: " << inches << endl;
+    std::cout << "The measurment is: " << inches << std::endl;
 }
 
 void printMeasuremnt(Distance d, char feetSymbol, char inchesSymbol)
 {
-    cout << "The measurment is: " << d.feet << feetSymbol
-         << d.inches << inchesSymbol << endl;
+    std::cout << "The measurment is: " << d.feet << feetSymbol
+              << d.inches << inchesSymbol << std::endl;
 }
 
 /*
@@ -139,9 +138,9 @@ greetings("Hola") - > Hola
 Function overloading can be done when function have default values as well.
 */
 
-void greetings(string str = "Hello")
+void greetings(std::string str = "Hello")
 {
-    cout << str << endl;
+    std::cout << str << std::endl;
 }
 
 int main()
@@ -155,17 +154,17 @@ int main()
     printLine1('r');
 
     Distance d = {5, 7};
-    cout << endl
-         << distanceInInches(d) << endl
-         << endl;
+    std::cout << std::endl
+              << distanceInInches(d) << std::endl
+              << std::endl;
 
     int quotient, remainder;
 
     div(17, 5, quotient, remainder);
 
-    cout << "The qoutient of 17/5 is: " << quotient << endl;
-    cout << "The remiander of 17/5 is: " << remainder << endl
-         << endl;
+    std::cout << "The qoutient of 17/5 is: " << quotient << std::endl;
+    std::cout << "The remiander of 17/5 is: " << remainder << std::endl
+              << std::endl;
 
     /*
     every time the function sayHello() is the called the control jumps to
@@ -188,8 +187,8 @@ int main()
     a = 7;
     sayHello();
 
-    cout << endl
-         << "7! = " << factorial(7) << endl;
+    std::cout << std::endl
+              << "7! = " << factorial(7) << std::endl;
 
     return 0;
 }
@@ -198,7 +197,7 @@ void printLine1(char ch)
 {
     for (int i = 0; i < 10; i++)
     {
-        cout << ch;
+        std::cout << ch;
     }
-    cout << endl;
+    std::cout << std::endl;
 }

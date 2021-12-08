@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 // Base class
 class Vehicle
@@ -14,12 +13,12 @@ protected:
 public:
     void honk()
     {
-        cout << "Tuut, tuut!" << endl;
+        std::cout << "Tuut, tuut!" << std::endl;
     }
 
     void info()
     {
-        cout << "This is a " << brand;
+        std::cout << "This is a " << brand;
     }
 
     string getBrand()
@@ -29,7 +28,7 @@ public:
 
     Vehicle(string b) : brand(b)
     {
-        cout << "I'm in Base class constructor" << endl;
+        std::cout << "I'm in Base class constructor" << std::endl;
     }
 };
 
@@ -71,7 +70,7 @@ public:
     void info()
     {
         Vehicle::info();
-        cout << " " << model << endl;
+        std::cout << " " << model << std::endl;
     }
 
     string getModel()
@@ -85,7 +84,7 @@ public:
     */
     Car(string b, string m) : Vehicle(b), model(m)
     {
-        cout << "I'm in Child class constructor" << endl;
+        std::cout << "I'm in Child class constructor" << std::endl;
     }
 };
 
@@ -93,6 +92,6 @@ int main()
 {
     Car myCar("Ford", "Mustang");
     myCar.honk(); // calling function of base class from child class
-    cout << myCar.getBrand() + " " + myCar.getModel();
+    std::cout << myCar.getBrand() + " " + myCar.getModel();
     return 0;
 }

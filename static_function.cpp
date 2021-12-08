@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 class Distance
 {
@@ -18,9 +17,9 @@ public:
 
     void show()
     {
-        cout << "The distance is: " << feet << "'" << inches << "\"" << endl;
-        cout << "Total distance objects are: " << count << endl
-             << endl;
+        std::cout << "The distance is: " << feet << "'" << inches << "\"" << std::endl;
+        std::cout << "Total distance objects are: " << count << std::endl
+                  << std::endl;
     }
 
     static void showTotal()
@@ -30,7 +29,7 @@ public:
     any object or by class also.
     */
     {
-        cout << "Total distance objects are: " << count << endl;
+        std::cout << "Total distance objects are: " << count << std::endl;
     }
 };
 

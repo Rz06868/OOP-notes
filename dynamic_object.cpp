@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 class Distance
 {
@@ -11,7 +10,7 @@ public:
 
     void show()
     {
-        cout << "The distance is: " << feet << "'" << inches << "\"" << endl;
+        std::cout << "The distance is: " << feet << "'" << inches << "\"" << std::endl;
     }
 };
 

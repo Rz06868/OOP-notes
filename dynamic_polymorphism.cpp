@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 class Animal
 {
@@ -25,8 +24,8 @@ we want to have. the method is to override the function outside the class.
 */
 void Animal::makeSound()
 {
-    cout << "No sound" << endl
-         << endl;
+    std::cout << "No sound" << std::endl
+              << std::endl;
 }
 
 class Cat : public Animal
@@ -34,8 +33,8 @@ class Cat : public Animal
 public:
     void makeSound()
     {
-        cout << "Meow Meow" << endl
-             << endl;
+        std::cout << "Meow Meow" << std::endl
+                  << std::endl;
     }
 };
 
@@ -44,8 +43,8 @@ class Dog : public Animal
 public:
     void makeSound()
     {
-        cout << "Wuff Wuff" << endl
-             << endl;
+        std::cout << "Wuff Wuff" << std::endl
+                  << std::endl;
     }
 };
 
@@ -54,8 +53,8 @@ class Cow : public Animal
 public:
     void makeSound()
     {
-        cout << "Moo Moo" << endl
-             << endl;
+        std::cout << "Moo Moo" << std::endl
+                  << std::endl;
     }
 };
 

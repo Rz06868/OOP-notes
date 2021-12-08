@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 class Counter
 {
@@ -12,7 +11,7 @@ public:
 
     void show()
     {
-        cout << "Count = " << count << endl;
+        std::cout << "Count = " << count << std::endl;
     }
 
     // prefix form
@@ -63,13 +62,13 @@ public:
 
     friend void testFunction(Counter);
     friend void operator-=(Counter, int);
-    friend ostream &operator<<(ostream &, Counter);
-    friend istream &operator>>(istream &, Counter);
+    friend std::ostream &operator<<(std::ostream &, Counter);
+    friend std::istream &operator>>(std::istream &, Counter);
 };
 
 void testFunction(Counter C)
 {
-    cout << "count is " << C.count << endl;
+    std::cout << "count is " << C.count << std::endl;
 }
 
 void operator-=(Counter C, int x)
@@ -77,22 +76,22 @@ void operator-=(Counter C, int x)
     C.count -= x;
 }
 
-ostream &operator<<(ostream &out, Counter C)
+std::ostream &operator<<(std::ostream &out, Counter C)
 /*
 show() works same as cout for Counter objects,
 we can also overload the cout operator.
-cout is the object of ostream class,
+cout is the object of std::ostream class,
 we have to pass it by refernce otherwise compiler won't compile
 */
 {
-    cout << C.count;
+    std::cout << C.count;
     return out;
 }
 
-istream &operator>>(istream &in, Counter C)
+std::istream &operator>>(std::istream &in, Counter C)
 {
     int x;
-    cin >> x;
+    std::cin >> x;
     C.count = x;
     return in;
 }
@@ -128,7 +127,7 @@ int main()
 
     c1.show();
 
-    cout << "c1 count from cout << operator: ";
-    cout << c1;
+    std::cout << "c1 count from std::cout << operator: ";
+    std::cout << c1;
     return 0;
 }

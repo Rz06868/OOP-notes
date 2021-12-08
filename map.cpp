@@ -1,6 +1,5 @@
 #include <iostream>
 #include <map>
-using namespace std;
 
 /*
 map is a cpp structure which stores data in a key-value pair,
@@ -14,7 +13,7 @@ map sorts the data on the basis of keys.
 
 int main()
 {
-    map<int, string> m;
+    std::map<int, std::string> m;
 
     m[0] = "Zero"; // to insert value against some key
     m[1] = "One";
@@ -34,17 +33,17 @@ int main()
 
     if (m.find(4) != m.end())
     {
-        cout << "element found" << endl;
+        std::cout << "element found" << std::endl;
     }
     else
     {
-        cout << "element not found" << endl;
+        std::cout << "element not found" << std::endl;
     }
 
     for (auto element : m)
     {
-        cout << "key: " << element.first << ", "
-             << "value: " << element.second << endl;
+        std::cout << "key: " << element.first << ", "
+                  << "value: " << element.second << std::endl;
     }
     return 0;
 }

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <list>
-using namespace std;
 
 int main()
 {
@@ -13,28 +12,28 @@ int main()
 
     for (auto v : L)
     {
-        cout << v << " ";
+        std::cout << v << " ";
     }
 
-    cout << endl
-         << endl;
+    std::cout << std::endl
+              << std::endl;
 
-    cout << "The last element of the list is " << L.back() << endl;
+    std::cout << "The last element of the list is " << L.back() << std::endl;
     L.pop_back();
 
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "The front element of the list is " << L.front() << endl
-         << endl;
+    std::cout << "The front element of the list is " << L.front() << std::endl
+              << std::endl;
     L.pop_front();
 
     for (auto v : L)
     {
-        cout << v << " ";
+        std::cout << v << " ";
     }
 
-    cout << endl
-         << endl;
+    std::cout << std::endl
+              << std::endl;
 
     /*
     itterator is a pointer to elements in the list. to print it out
@@ -47,7 +46,7 @@ int main()
 
     for (list<int>::iterator it = L.begin(); it != L.end(); it++)
     {
-        cout << *it << " ";
+        std::cout << *it << " ";
     }
 
     L.clear();
@@ -55,7 +54,7 @@ int main()
     for (auto v : L)
     // this loop prints nothing because list is cleared
     {
-        cout << v << " ";
+        std::cout << v << " ";
     }
     return 0;
 }

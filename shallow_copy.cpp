@@ -30,7 +30,6 @@ operator in order to perform shallow copy at compile time.
 */
 
 #include <iostream>
-using namespace std;
 
 // Box Class
 class box
@@ -55,9 +54,9 @@ public:
     // Function to display the dimensions of the Box object
     void show_data()
     {
-        cout << "Length = " << length << endl
-             << " Breadth = " << breadth << endl
-             << " Height = " << height << endl;
+        std::cout << "Length = " << length << std::endl
+                  << " Breadth = " << breadth << std::endl
+                  << " Height = " << height << std::endl;
     }
 };
 

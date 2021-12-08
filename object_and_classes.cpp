@@ -1,7 +1,6 @@
 #include "LightClass.hpp"
 
 #include <iostream>
-using namespace std;
 
 struct LightStructure
 /*
@@ -45,7 +44,7 @@ void LightClass::showStatus()
 {
     if (state)
     {
-        cout << "Brightness of the light is " << brightness << endl;
+        std::cout << "Brightness of the light is " << brightness << std::endl;
     }
 }
 
@@ -79,7 +78,7 @@ int main()
     // checking the brightness of the light
     if (LStructure.state)
     {
-        cout << "Brightness of the light is " << LStructure.brightness << endl;
+        std::cout << "Brightness of the light is " << LStructure.brightness << std::endl;
     }
 
     // increasing the brightness
@@ -87,7 +86,7 @@ int main()
 
     LStructure.state = false; // turning LStructure on
 
-    cout << endl;
+    std::cout << std::endl;
 
     LightClass LObject = {false, 7}; // universal form of initilization
     LightClass LObject1{true};       // = operator is optional

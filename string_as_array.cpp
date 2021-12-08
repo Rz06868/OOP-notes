@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string.h> // header for strings
 #include <string>   //cpp file
-using namespace std;
 
 int main()
 {
@@ -16,13 +15,13 @@ int main()
     the ascii value of null char is 0
     */
 
-    cout << str[5] << endl; // it will print as a blank
+    std::cout << str[5] << std::endl; // it will print as a blank
 
     for (int i = 0; str[i] != 0; i++)
     {
-        cout << str[i] << " ";
+        std::cout << str[i] << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 
     /*
     we can also make string by assiging values to char array.
@@ -36,7 +35,7 @@ int main()
     str1[2] = 'C';
     str1[3] = 0;
 
-    cout << str1 << endl;
+    std::cout << str1 << std::endl;
 
     /*
     this simple task can also be acheived by string.h file.
@@ -45,14 +44,14 @@ int main()
     */
 
     char str2[10] = "abc";
-    cout << "str2: " << str2 << endl;
+    std::cout << "str2: " << str2 << std::endl;
 
-    cout << "str1 before being copied: " << str1 << endl;
+    std::cout << "str1 before being copied: " << str1 << std::endl;
 
     strcpy(str1, str2); // from string.h header file
 
-    cout << "str1 after being copied: " << str1 << endl
-         << endl;
+    std::cout << "str1 after being copied: " << str1 << std::endl
+              << std::endl;
 
     /*
     the problem with cahr array is its limited flexibility.
@@ -71,14 +70,14 @@ int main()
 
     if (s3 == "Sunday")
     {
-        cout << "Its a fun day" << endl;
+        std::cout << "Its a fun day" << std::endl;
     }
 
     s3 = s1 + " is " + s3;
 
-    cout << s3 << endl;
+    std::cout << s3 << std::endl;
 
-    cout << "length of the string is " << s3.length() << endl; //'length() returns the length of the string
+    std::cout << "length of the string is " << s3.length() << std::endl; //'length() returns the length of the string
 
     return 0;
 }

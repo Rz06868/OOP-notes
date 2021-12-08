@@ -1,11 +1,10 @@
 #include <iostream>
-using namespace std;
 
 int main()
 {
     int array[] = {0, 1, 4, 7, 8, 5, 2, 3, 6, 9};
 
-    cout << "array[] = {";
+    std::cout << "array[] = {";
     /*
     range based loops works same as we do in python. for example to itterate
     over the elements of a list number by using a dumy variable n we write
@@ -21,21 +20,21 @@ int main()
     */
     for (int arrayElement : array)
     {
-        cout << arrayElement << ", ";
+        std::cout << arrayElement << ", ";
     }
-    cout << "}" << endl;
+    std::cout << "}" << std::endl;
 
     /*
     if you want to cahnge the values in the array inside the loop,
     then pass dumy variable by reference.
     */
 
-    cout << "array[] = {";
+    std::cout << "array[] = {";
     for (int &arrayElement : array)
     {
         arrayElement = 0;
-        cout << arrayElement << ", ";
+        std::cout << arrayElement << ", ";
     }
-    cout << "}" << endl;
+    std::cout << "}" << std::endl;
     return 0;
 }

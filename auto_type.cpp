@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 /*
 auto type detects the type od the argument by itself.
@@ -44,6 +43,6 @@ int main()
     see definiton of sum().
     */
 
-    cout << sum() << endl;
+    std::cout << sum() << std::endl;
     return 0;
 }

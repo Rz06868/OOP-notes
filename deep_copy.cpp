@@ -10,7 +10,6 @@ memory to the variables in the other constructors, as well.
 
 // deep copy
 #include <iostream>
-using namespace std;
 
 // Box Class
 class box
@@ -41,9 +40,9 @@ public:
     // Function to show the dimensions of the Box
     void show_data()
     {
-        cout << "Length = " << length << endl
-             << " Breadth = " << *breadth << endl
-             << " Height = " << height << endl;
+        std::cout << "Length = " << length << std::endl
+                  << " Breadth = " << *breadth << std::endl
+                  << " Height = " << height << std::endl;
     }
 
     // Parameterized Constructors for implementing deep copy

@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 void increment(int B[])
 {
@@ -15,7 +14,7 @@ int main()
     increment(A);
     for (int i = 0; i < 5; i++)
     {
-        cout << A[i] << endl;
+        std::cout << A[i] << std::endl;
     }
     return 0;
 }

@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 /*
 ennum is a user defined type for limited range of values,
@@ -20,89 +19,89 @@ enum
 int main()
 {
     // giving each day of the week a number
-    cout << 0 << " : Monday" << endl;
-    cout << 1 << " : Tuesday" << endl;
-    cout << 2 << " : Wednesday" << endl;
-    cout << 3 << " : Thursday" << endl;
-    cout << 4 << " : Friday" << endl;
-    cout << 5 << " : Saturday" << endl;
-    cout << 6 << " : Sunday" << endl;
+    std::cout << 0 << " : Monday" << std::endl;
+    std::cout << 1 << " : Tuesday" << std::endl;
+    std::cout << 2 << " : Wednesday" << std::endl;
+    std::cout << 3 << " : Thursday" << std::endl;
+    std::cout << 4 << " : Friday" << std::endl;
+    std::cout << 5 << " : Saturday" << std::endl;
+    std::cout << 6 << " : Sunday" << std::endl;
 
     int choice;
     // asking user for the their choice and printing it
-    cin >> choice;
+    std::cin >> choice;
     if (choice == 0)
     {
-        cout << "Monday" << endl;
+        std::cout << "Monday" << std::endl;
     }
     else if (choice == 1)
     {
-        cout << "Tuesday" << endl;
+        std::cout << "Tuesday" << std::endl;
     }
     else if (choice == 2)
     {
-        cout << "Wednesday" << endl;
+        std::cout << "Wednesday" << std::endl;
     }
     else if (choice == 3)
     {
-        cout << "Thursday" << endl;
+        std::cout << "Thursday" << std::endl;
     }
     else if (choice == 4)
     {
-        cout << "Friday" << endl;
+        std::cout << "Friday" << std::endl;
     }
     else if (choice == 5)
     {
-        cout << "Saturday" << endl;
+        std::cout << "Saturday" << std::endl;
     }
     else if (choice == 6)
     {
-        cout << "Sunday" << endl;
+        std::cout << "Sunday" << std::endl;
     }
 
     // very same situation can be delat with enum data type
 
-    cout << endl
-         << "enum situation" << endl
-         << endl;
+    std::cout << std::endl
+              << "enum situation" << std::endl
+              << std::endl;
 
-    cout << MONDAY << " : Monday" << endl;
-    cout << TUESDAY << " : Tuesday" << endl;
-    cout << WEDNESDAY << " : Wednesday" << endl;
-    cout << THURSDAY << " : Thursday" << endl;
-    cout << FRIDAY << " : Friday" << endl;
-    cout << SATURDAY << " : Saturday" << endl;
-    cout << SUNDAY << " : Sunday" << endl;
+    std::cout << MONDAY << " : Monday" << std::endl;
+    std::cout << TUESDAY << " : Tuesday" << std::endl;
+    std::cout << WEDNESDAY << " : Wednesday" << std::endl;
+    std::cout << THURSDAY << " : Thursday" << std::endl;
+    std::cout << FRIDAY << " : Friday" << std::endl;
+    std::cout << SATURDAY << " : Saturday" << std::endl;
+    std::cout << SUNDAY << " : Sunday" << std::endl;
 
     // asking user for the their choice and printing it
-    cin >> choice;
+    std::cin >> choice;
     if (choice == MONDAY)
     {
-        cout << "Monday" << endl;
+        std::cout << "Monday" << std::endl;
     }
     else if (choice == TUESDAY)
     {
-        cout << "Tuesday" << endl;
+        std::cout << "Tuesday" << std::endl;
     }
     else if (choice == WEDNESDAY)
     {
-        cout << "Wednesday" << endl;
+        std::cout << "Wednesday" << std::endl;
     }
     else if (choice == THURSDAY)
     {
-        cout << "Thursday" << endl;
+        std::cout << "Thursday" << std::endl;
     }
     else if (choice == FRIDAY)
     {
-        cout << "Friday" << endl;
+        std::cout << "Friday" << std::endl;
     }
     else if (choice == SATURDAY)
     {
-        cout << "Saturday" << endl;
+        std::cout << "Saturday" << std::endl;
     }
     else if (choice == SUNDAY)
     {
-        cout << "Sunday" << endl;
+        std::cout << "Sunday" << std::endl;
     }
 
     return 0;

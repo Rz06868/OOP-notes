@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 /*
 scope: where the function is available
 storage where the funciton is stored or in which class
@@ -59,9 +59,9 @@ int main()
         when ever the x is called inside the for loop, the locak x will be called.
         */
 
-        cout << "Sum is: " << sum << endl;
+        std::cout << "Sum is: " << sum << std::endl;
     }
 
-    // cout << sum << endl;
+    // std::cout << sum << std::endl;
     return 0;
 }
