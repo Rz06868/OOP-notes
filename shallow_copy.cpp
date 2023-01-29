@@ -7,53 +7,48 @@ object having the same literal value, data type, and resources.
 
 Depending upon the resources like dynamic memory held by the object, either we
 need to perform Shallow Copy or Deep Copy in order to create a replica of the
-object. In general, if the variables of an object have been dynamically allocated
-then it is required to do a Deep Copy in order to create a copy of the object.
+object. In general, if the variables of an object have been dynamically
+allocated then it is required to do a Deep Copy in order to create a copy of the
+object.
 */
 
 /*
 Shallow Copy:
 
-In shallow copy, an object is created by simply copying the data of all variables
-of the original object. This works well if none of the variables of the object are
-defined in the heap section of memory. If some variables are dynamically allocated
-memory from heap section, then copied object variable will also reference then same
-memory location.
+In shallow copy, an object is created by simply copying the data of all
+variables of the original object. This works well if none of the variables of
+the object are defined in the heap section of memory. If some variables are
+dynamically allocated memory from heap section, then copied object variable will
+also reference then same memory location.
 
-This will create ambiguity and run-time errors dangling pointer. Since both objects
-will reference to the same memory location, then change made by one will reflect those
-change in another object as well. Since we wanted to create a replica of the object,
-this purpose will not be filled by Shallow copy.
+This will create ambiguity and run-time errors dangling pointer. Since both
+objects will reference to the same memory location, then change made by one will
+reflect those change in another object as well. Since we wanted to create a
+replica of the object, this purpose will not be filled by Shallow copy.
 
-Note: C++ compiler implicitly creates a copy constructor and overloads assignment
-operator in order to perform shallow copy at compile time.
+Note: C++ compiler implicitly creates a copy constructor and overloads
+assignment operator in order to perform shallow copy at compile time.
 */
 
 #include <iostream>
 
 // Box Class
-class box
-{
+class box {
 private:
-    int length;
-    int breadth;
-    int height;
+
+    int length, breadth, height;
 
 public:
+
     // Function that sets the dimensions
-    void set_dimensions(
-        int length1,
-        int breadth1,
-        int height1)
-    {
-        length = length1;
+    void set_dimensions(int length1, int breadth1, int height1) {
+        length  = length1;
         breadth = breadth1;
-        height = height1;
+        height  = height1;
     }
 
     // Function to display the dimensions of the Box object
-    void show_data()
-    {
+    void show_data() {
         std::cout << "Length = " << length << std::endl
                   << " Breadth = " << breadth << std::endl
                   << " Height = " << height << std::endl;
@@ -61,8 +56,7 @@ public:
 };
 
 // Driver Code
-int main()
-{
+int main() {
     // Object of class Box
     box B1, B3;
 

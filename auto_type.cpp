@@ -4,11 +4,10 @@
 auto type detects the type od the argument by itself.
 */
 
-auto sum()
-{
-    auto a = 0;   // a is int type
-    auto b = 0.0; // b is double type
-    cin >> a >> b;
+auto sum() {
+    auto a = 0;    // a is int type
+    auto b = 0.0;  // b is double type
+    std::cin >> a >> b;
     /*
     int + double = double
     therefore the return of the function is double.
@@ -16,8 +15,7 @@ auto sum()
     return a + b;
 }
 
-int main()
-{
+int main() {
     // x is a int type variable
     int x = 5;
 

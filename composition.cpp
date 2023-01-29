@@ -9,17 +9,14 @@ object classes destroyed when the main class object dies.
 Like when a car is deleted, its door and engine are also deleted.
 */
 
-class Car
-{
+class Car {
     // atributes and methods
 };
 
-class Door
-{
+class Door {
     // atributes and methods
 };
 
-class Engine
-{
+class Engine {
     // atributes and methods
 };

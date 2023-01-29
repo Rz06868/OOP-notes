@@ -1,8 +1,8 @@
 #include <iostream>
 
-class Animal
-{
+class Animal {
 public:
+
     /*
     By making the funtion virtual, when an animal type pointer
     pointing Cat, Dog or Cow type object and makeSound function
@@ -22,44 +22,27 @@ public:
 most of the time pure virtual functions don't have body, but sometime
 we want to have. the method is to override the function outside the class.
 */
-void Animal::makeSound()
-{
-    std::cout << "No sound" << std::endl
-              << std::endl;
-}
+void Animal::makeSound() { std::cout << "No sound" << std::endl << std::endl; }
 
-class Cat : public Animal
-{
+class Cat : public Animal {
 public:
-    void makeSound()
-    {
-        std::cout << "Meow Meow" << std::endl
-                  << std::endl;
-    }
+
+    void makeSound() { std::cout << "Meow Meow" << std::endl << std::endl; }
 };
 
-class Dog : public Animal
-{
+class Dog : public Animal {
 public:
-    void makeSound()
-    {
-        std::cout << "Wuff Wuff" << std::endl
-                  << std::endl;
-    }
+
+    void makeSound() { std::cout << "Wuff Wuff" << std::endl << std::endl; }
 };
 
-class Cow : public Animal
-{
+class Cow : public Animal {
 public:
-    void makeSound()
-    {
-        std::cout << "Moo Moo" << std::endl
-                  << std::endl;
-    }
+
+    void makeSound() { std::cout << "Moo Moo" << std::endl << std::endl; }
 };
 
-int main()
-{
+int main() {
     Animal *animalPtr = new Cat();
     animalPtr->makeSound();
 

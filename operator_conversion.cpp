@@ -1,8 +1,8 @@
-class Distance
-{
+class Distance {
     int feet, inches;
 
 public:
+
     Distance(int f, int i) : feet(f), inches(i) {}
 
     /*
@@ -17,14 +17,10 @@ public:
 
     */
 
-    operator float()
-    {
-        return feet + inches / 12.0;
-    }
+    operator float() { return feet + inches / 12.0; }
 };
 
-int main()
-{
+int main() {
     Distance d1 = {2, 3};
     Distance d2 = {7, 4};
     /*
@@ -32,6 +28,6 @@ int main()
     this ambuguity make compiler to generate error.
     */
     float length = d1;
-    float width = d2;
+    float width  = d2;
     return 0;
 }

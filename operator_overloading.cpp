@@ -1,29 +1,22 @@
 #include <iostream>
 
-class Counter
-{
+class Counter {
 private:
+
     int count;
 
 public:
+
     Counter() : count(0) {}
     Counter(int c) : count(c) {}
 
-    void show()
-    {
-        std::cout << "Count = " << count << std::endl;
-    }
+    void show() { std::cout << "Count = " << count << std::endl; }
 
     // prefix form
-    void operator++()
-    {
-        count++;
-    }
+    void operator++() { count++; }
 
-    void operator--()
-    {
-        if (count > 0)
-        {
+    void operator--() {
+        if (count > 0) {
             count--;
         }
     }
@@ -35,46 +28,29 @@ public:
         count++;
     }
 
-    void operator--(int)
-    {
-        if (count > 0)
-        {
-            count--;
-        }
+    void operator--(int) {
+        if (count > 0) count--;
     }
 
     // binary operators
     // An operator can be define multiple times, with varying the argument type.
-    Counter operator+(Counter c)
-    {
-        return Counter{count + c.count};
-    }
+    Counter operator+(Counter c) { return Counter{count + c.count}; }
 
-    Counter operator+(int x)
-    {
-        return Counter{count + x};
-    }
+    Counter operator+(int x) { return Counter{count + x}; }
 
-    void operator+=(Counter c)
-    {
-        count += c.count;
-    }
+    void operator+=(Counter c) { count += c.count; }
 
-    friend void testFunction(Counter);
-    friend void operator-=(Counter, int);
+    friend void          testFunction(Counter);
+    friend void          operator-=(Counter, int);
     friend std::ostream &operator<<(std::ostream &, Counter);
     friend std::istream &operator>>(std::istream &, Counter);
 };
 
-void testFunction(Counter C)
-{
+void testFunction(Counter C) {
     std::cout << "count is " << C.count << std::endl;
 }
 
-void operator-=(Counter C, int x)
-{
-    C.count -= x;
-}
+void operator-=(Counter C, int x) { C.count -= x; }
 
 std::ostream &operator<<(std::ostream &out, Counter C)
 /*
@@ -88,16 +64,14 @@ we have to pass it by refernce otherwise compiler won't compile
     return out;
 }
 
-std::istream &operator>>(std::istream &in, Counter C)
-{
+std::istream &operator>>(std::istream &in, Counter C) {
     int x;
     std::cin >> x;
     C.count = x;
     return in;
 }
 
-int main()
-{
+int main() {
     Counter c;
 
     c.show();

@@ -2,68 +2,56 @@
 Deep Copy:
 
 In Deep copy, an object is created by copying data of all variables and it also
-allocates similar memory resources with the same value to the object. In order to
-perform Deep copy, we need to explicitly define the copy constructor and assign
-dynamic memory as well if required. Also, it is required to dynamically allocate
-memory to the variables in the other constructors, as well.
+allocates similar memory resources with the same value to the object. In order
+to perform Deep copy, we need to explicitly define the copy constructor and
+assign dynamic memory as well if required. Also, it is required to dynamically
+allocate memory to the variables in the other constructors, as well.
 */
 
 // deep copy
 #include <iostream>
 
 // Box Class
-class box
-{
+class box {
 private:
-    int length;
+
+    int  length;
     int *breadth;
-    int height;
+    int  height;
 
 public:
+
     // Constructor
-    box()
-    {
-        breadth = new int;
-    }
+    box() { breadth = new int; }
 
     // Function to set the dimensions of the Box
-    void set_dimension(
-        int len,
-        int brea,
-        int heig)
-    {
-        length = len;
+    void set_dimension(int len, int brea, int heig) {
+        length   = len;
         *breadth = brea;
-        height = heig;
+        height   = heig;
     }
 
     // Function to show the dimensions of the Box
-    void show_data()
-    {
+    void show_data() {
         std::cout << "Length = " << length << std::endl
                   << " Breadth = " << *breadth << std::endl
                   << " Height = " << height << std::endl;
     }
 
     // Parameterized Constructors for implementing deep copy
-    box(box &sample)
-    {
-        length = sample.length;
-        breadth = new int;
+    box(box &sample) {
+        length   = sample.length;
+        breadth  = new int;
         *breadth = *(sample.breadth);
-        height = sample.height;
+        height   = sample.height;
     }
 
     // Destructors
-    ~box()
-    {
-        delete breadth;
-    }
+    ~box() { delete breadth; }
 };
 
 // Driver Code
-int main()
-{
+int main() {
     // Object of class first
     box first;
 

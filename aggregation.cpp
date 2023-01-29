@@ -6,19 +6,14 @@ Hotel has Rooms.
 Computer has CPU.
 */
 
-class CPU
-{
+class CPU {
     // atributes and methods
 };
 
-class Computer
-{
-    CPU cpu; // CPU is part of the computer
+class Computer {
+    CPU cpu;  // CPU is part of the computer
 
     // atributes and methods
 };
 
-int main()
-{
-    return 0;
-}
+int main() { return 0; }

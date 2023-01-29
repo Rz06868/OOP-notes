@@ -1,7 +1,6 @@
 #include <iostream>
 
-class Distance
-{
+class Distance {
     int feet, inches;
     /*
     static attributes are created once for every object.
@@ -10,14 +9,12 @@ class Distance
     static int count;
 
 public:
-    Distance(int f, int i) : feet(f), inches(i)
-    {
-        count++;
-    }
 
-    void show()
-    {
-        std::cout << "The distance is: " << feet << "'" << inches << "\"" << std::endl;
+    Distance(int f, int i) : feet(f), inches(i) { count++; }
+
+    void show() {
+        std::cout << "The distance is: " << feet << "'" << inches << "\""
+                  << std::endl;
         std::cout << "Total distance objects are: " << count << std::endl
                   << std::endl;
     }
@@ -35,8 +32,7 @@ public:
 
 int Distance::count = 0;
 
-int main()
-{
+int main() {
     Distance d1 = {2, 3};
     Distance d2 = {3, 9};
     Distance d3 = {6, 2};
@@ -47,8 +43,8 @@ int main()
     d3.show();
     d4.show();
 
-    d1.showTotal();        // calling by object
-    Distance::showTotal(); // calling by class
+    d1.showTotal();         // calling by object
+    Distance::showTotal();  // calling by class
 
     return 0;
 }

@@ -1,33 +1,25 @@
 #include <iostream>
 
 // Base class
-class Vehicle
-{
+class Vehicle {
     /*
     protected attributes are accessible inside class
     as well as in child of the class too.
     */
+
 protected:
-    string brand;
+
+    std::string brand;
 
 public:
-    void honk()
-    {
-        std::cout << "Tuut, tuut!" << std::endl;
-    }
 
-    void info()
-    {
-        std::cout << "This is a " << brand;
-    }
+    void honk() const { std::cout << "Tuut, tuut!" << std::endl; }
 
-    string getBrand()
-    {
-        return brand;
-    }
+    void info() const { std::cout << "This is a " << brand; }
 
-    Vehicle(string b) : brand(b)
-    {
+    std::string getBrand() const { return brand; }
+
+    Vehicle(std::string b) : brand(b) {
         std::cout << "I'm in Base class constructor" << std::endl;
     }
 };
@@ -42,16 +34,18 @@ Dog is an Animal.
 */
 
 // Derived class
-class Car : public Vehicle
-{
+class Car : public Vehicle {
     /*
     private attributes defined in parent class will not
     be accessible in child class as well.
     */
+
 protected:
-    string model;
+
+    std::string model;
 
 public:
+
     /*
     defining function with same name in same class with
     different attributes is function overloading.
@@ -67,31 +61,25 @@ public:
     so that they may be used in child classes with same
     name as of parent.
     */
-    void info()
-    {
+    void info() const {
         Vehicle::info();
         std::cout << " " << model << std::endl;
     }
 
-    string getModel()
-    {
-        return model;
-    }
+    std::string getModel() { return model; }
 
     /*
     A parent class constructor can be delegated
     in child class constructor only in initializer list.
     */
-    Car(string b, string m) : Vehicle(b), model(m)
-    {
+    Car(std::string b, std::string m) : Vehicle(b), model(m) {
         std::cout << "I'm in Child class constructor" << std::endl;
     }
 };
 
-int main()
-{
+int main() {
     Car myCar("Ford", "Mustang");
-    myCar.honk(); // calling function of base class from child class
+    myCar.honk();  // calling function of base class from child class
     std::cout << myCar.getBrand() + " " + myCar.getModel();
     return 0;
 }

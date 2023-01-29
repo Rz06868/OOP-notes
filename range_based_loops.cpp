@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main()
-{
+int main() {
     int array[] = {0, 1, 4, 7, 8, 5, 2, 3, 6, 9};
 
     std::cout << "array[] = {";
@@ -13,15 +12,13 @@ int main()
 
     in cpp the syntax goes as,
 
-    for (<data-type of elements> <name of dumy variable>: <object on which itterating>)
+    for (<data-type of elements> <name of dumy variable>: <object on which
+    itterating>)
 
     for below example, array is an int type array, so the type of dumy
     variable is also int.
     */
-    for (int arrayElement : array)
-    {
-        std::cout << arrayElement << ", ";
-    }
+    for (int arrayElement : array) std::cout << arrayElement << ", ";
     std::cout << "}" << std::endl;
 
     /*
@@ -30,8 +27,7 @@ int main()
     */
 
     std::cout << "array[] = {";
-    for (int &arrayElement : array)
-    {
+    for (int &arrayElement : array) {
         arrayElement = 0;
         std::cout << arrayElement << ", ";
     }

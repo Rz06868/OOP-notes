@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 
-int main()
-{
+int main() {
     /*
     vector is a dynamic object
     std::vector<data type> name;
@@ -16,19 +15,23 @@ int main()
     // to add element at the last position push_back() is used
     intVector.push_back(10);
 
-    for (int val : intVector)
-    {
-        std::cout << val << " ";
-    }
+    for (int val : intVector) std::cout << val << " ";
 
     // size() returns size of the vector
     std::cout << std::endl
               << "size of vector is " << intVector.size() << std::endl;
 
-    std::cout << "value at front is " << intVector.front() << std::endl;      // front() returns value at 0 position
-    std::cout << "value at back is " << intVector.back() << std::endl;        // back() returns value at last position
-    std::cout << "value at 5th position is " << intVector.at(5) << std::endl; // at(i) returns value at ith position, it can also be accesed by [] acces specifier
-    intVector.pop_back();                                                     // pops value at the back
+    // front() returns value at 0 position
+    std::cout << "value at front is " << intVector.front() << std::endl;
+
+    // back() returns value at last position
+    std::cout << "value at back is " << intVector.back() << std::endl;
+
+    // at(i) returns value at ith position, it can also
+    // be accesed by [] acces specifier
+    std::cout << "value at 5th position is " << intVector.at(5) << std::endl;
+
+    intVector.pop_back();  // pops value at the back
 
     return 0;
 }
