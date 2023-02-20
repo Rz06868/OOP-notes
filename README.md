@@ -4,36 +4,49 @@ This is a collection of notes I've taken while learning OOP. The notes are writt
 
 ## Table of Contents
 
-```bash
+```
 OOP-notes
-├── aggregation.cpp
-├── array.cpp
-├── auto_type.cpp
-├── composition.cpp
-├── deep_copy.cpp
-├── dynamic_object.cpp
-├── dynamic_polymorphism.cpp
-├── enumeration.cpp
-├── exception_handling.cpp
-├── function.cpp
-├── inheritance.cpp
-├── LightClass.hpp
-├── list.cpp
-├── map.cpp
-├── object_and_classes.cpp
-├── operator_conversion.cpp
-├── operator_overloading.cpp
-├── polymorphism.cpp
-├── range_based_loops.cpp
+├── LICENSE.md
+├── makefile
 ├── README.md
-├── scope_and_storage.cpp
-├── shallow_copy.cpp
-├── static_function.cpp
-├── string_as_array.cpp
-├── structures.cpp
-├── template_function_class.cpp
-├── vector.cpp
-└── virtual_destructor.cpp
+├── array
+│   └── array.cpp
+├── class
+│   ├── LightClass.hpp
+│   ├── object_and_classes.cpp
+│   ├── operator_conversion.cpp
+│   ├── operator_overloading.cpp
+│   ├── template_function_class.cpp
+│   └── virtual_destructor.cpp
+├── copy-types
+│   ├── deep_copy.cpp
+│   └── shallow_copy.cpp
+├── function
+│   ├── function.cpp
+│   └── static_function.cpp
+├── general
+│   ├── auto_type.cpp
+│   ├── dynamic_object.cpp
+│   ├── enumeration.cpp
+│   ├── exception_handling.cpp
+│   ├── range_based_loops.cpp
+│   └── scope_and_storage.cpp
+├── list
+│   └── list.cpp
+├── map
+│   └── map.cpp
+├── oop
+│   ├── aggregation.cpp
+│   ├── composition.cpp
+│   ├── dynamic_polymorphism.cpp
+│   ├── inheritance.cpp
+│   └── polymorphism.cpp
+├── string
+│   └── string_as_array.cpp
+├── struct
+│   └── structures.cpp
+└── vector
+    └── vector.cpp
 ```
 
 ## Contributors

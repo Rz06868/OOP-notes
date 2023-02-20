@@ -1,15 +1,15 @@
 #include <iostream>
 
 void printLine() {
-    for (int i = 0; i < 10; i++) std::cout << "*";
-    std::cout << std::endl;
+        for (int i = 0; i < 10; i++) std::cout << "*";
+        std::cout << std::endl;
 }
 
 // most of the time the funciton is decleared in header files
 void printLine1(char);
 
 struct Distance {
-    int feet, inches;
+        int feet, inches;
 };
 
 int distanceInInches(Distance d)
@@ -23,7 +23,7 @@ distanceInInches(Distance d)
 }
 */
 {
-    return d.feet * 12 + d.inches;
+        return d.feet * 12 + d.inches;
 }
 
 void div(int x, int y, int &quotient, int &remainder)
@@ -32,8 +32,8 @@ if you think the function should not return anything at all,
 the return type should be void.
 */
 {
-    quotient  = x / y;
-    remainder = x - quotient * y;
+        quotient  = x / y;
+        remainder = x - quotient * y;
 }
 
 /*
@@ -75,9 +75,9 @@ void sayHello()
 // function recurssion
 
 int factorial(int n) {
-    if (n == 1) return 1;
+        if (n == 1) return 1;
 
-    return n * factorial(n - 1);
+        return n * factorial(n - 1);
 }
 
 /*
@@ -102,17 +102,14 @@ void printMeasuremnt(Distance d, char feetSymbol, char inchesSymbol)
 */
 
 void printMeasuremnt(Distance d) {
-    std::cout << "The measurment is: " << d.feet << "'" << d.inches << "\""
-              << std::endl;
+        std::cout << "The measurment is: " << d.feet << "'" << d.inches << "\"" << std::endl;
 }
 
-void printMeasuremnt(int inches) {
-    std::cout << "The measurment is: " << inches << std::endl;
-}
+void printMeasuremnt(int inches) { std::cout << "The measurment is: " << inches << std::endl; }
 
 void printMeasuremnt(Distance d, char feetSymbol, char inchesSymbol) {
-    std::cout << "The measurment is: " << d.feet << feetSymbol << d.inches
-              << inchesSymbol << std::endl;
+        std::cout << "The measurment is: " << d.feet << feetSymbol << d.inches << inchesSymbol
+                  << std::endl;
 }
 
 /*
@@ -127,52 +124,51 @@ Function overloading can be done when function have default values as well.
 void greetings(std::string str = "Hello") { std::cout << str << std::endl; }
 
 int main() {
-    printLine();
-    /*
-    complier will givea n error when function is defined afetr main().
-    to over come this error we defined the function before main()
-    and write its definition after main().
-    */
-    printLine1('r');
+        printLine();
+        /*
+        complier will givea n error when function is defined afetr main().
+        to over come this error we defined the function before main()
+        and write its definition after main().
+        */
+        printLine1('r');
 
-    Distance d = {5, 7};
-    std::cout << std::endl << distanceInInches(d) << std::endl << std::endl;
+        Distance d = {5, 7};
+        std::cout << std::endl << distanceInInches(d) << std::endl << std::endl;
 
-    int quotient, remainder;
+        int quotient, remainder;
 
-    div(17, 5, quotient, remainder);
+        div(17, 5, quotient, remainder);
 
-    std::cout << "The qoutient of 17/5 is: " << quotient << std::endl;
-    std::cout << "The remiander of 17/5 is: " << remainder << std::endl
-              << std::endl;
+        std::cout << "The qoutient of 17/5 is: " << quotient << std::endl;
+        std::cout << "The remiander of 17/5 is: " << remainder << std::endl << std::endl;
 
-    /*
-    every time the function sayHello() is the called the control jumps to
-    its memory location where function is defined.
+        /*
+        every time the function sayHello() is the called the control jumps to
+        its memory location where function is defined.
 
-    below there are 4 calls to function and the control will jump to function
-    definition 4 times. this uses extra memory and sloes the process.
+        below there are 4 calls to function and the control will jump to function
+        definition 4 times. this uses extra memory and sloes the process.
 
-    mean while, if the function is an inline funciton the statements of the
-    function will be copied to the point where it is called. apparently we can
-    not see it, but compiler can.
-    */
+        mean while, if the function is an inline funciton the statements of the
+        function will be copied to the point where it is called. apparently we can
+        not see it, but compiler can.
+        */
 
-    int a = 2;
-    sayHello();
-    a = 2;
-    sayHello();
-    a = 5;
-    sayHello();
-    a = 7;
-    sayHello();
+        int a = 2;
+        sayHello();
+        a = 2;
+        sayHello();
+        a = 5;
+        sayHello();
+        a = 7;
+        sayHello();
 
-    std::cout << std::endl << "7! = " << factorial(7) << std::endl;
+        std::cout << std::endl << "7! = " << factorial(7) << std::endl;
 
-    return 0;
+        return 0;
 }
 
 void printLine1(char ch) {
-    for (int i = 0; i < 10; i++) std::cout << ch;
-    std::cout << std::endl;
+        for (int i = 0; i < 10; i++) std::cout << ch;
+        std::cout << std::endl;
 }

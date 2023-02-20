@@ -7,13 +7,13 @@ Computer has CPU.
 */
 
 class CPU {
-    // atributes and methods
+        // atributes and methods
 };
 
 class Computer {
-    CPU cpu;  // CPU is part of the computer
+        CPU cpu;  // CPU is part of the computer
 
-    // atributes and methods
+        // atributes and methods
 };
 
 int main() { return 0; }
