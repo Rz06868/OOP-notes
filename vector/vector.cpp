@@ -6,9 +6,8 @@ int main() {
         vector is a dynamic object
         std::vector<data type> name;
 
-        when a vectrr is created cpp alocates some memory to it. when the vecotrs
-        starts populating the memory, and currently allocated memory is full,
-        cpp allocates new chuck of memory to the vector.
+        when a vectrr is created cpp alocates some memory to it. when the vecotrs starts populating the memory, and
+        currently allocated memory is full, cpp allocates new chuck of memory to the vector.
         */
         std::vector<int> intVector = {0, 1, 4, 7, 8, 5, 2, 3, 6, 9};
 
@@ -18,7 +17,7 @@ int main() {
         for (int val : intVector) std::cout << val << " ";
 
         // size() returns size of the vector
-        std::cout << std::endl << "size of vector is " << intVector.size() << std::endl;
+        std::cout << "\nsize of vector is " << intVector.size() << std::endl;
 
         // front() returns value at 0 position
         std::cout << "value at front is " << intVector.front() << std::endl;

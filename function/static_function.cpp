@@ -3,8 +3,7 @@
 class Distance {
         int feet, inches;
         /*
-        static attributes are created once for every object.
-        they are same for all objects.
+        static attributes are created once for every object. they are same for all objects.
         */
         static int count;
 
@@ -13,15 +12,15 @@ class Distance {
         Distance(int f, int i) : feet(f), inches(i) { count++; }
 
         void show() {
-                std::cout << "The distance is: " << feet << "'" << inches << "\"" << std::endl;
-                std::cout << "Total distance objects are: " << count << std::endl << std::endl;
+                std::cout << "The distance is: " << feet << "'" << inches << "\"\n"
+                          << "Total distance objects are: " << count << std::endl
+                          << std::endl;
         }
 
         static void showTotal()
         /*
-        static function are shared by all ibjects of the class.
-        They are often called class functions. we can call them by
-        any object or by class also.
+        static function are shared by all ibjects of the class. They are often called class functions. we can call them
+        by any object or by class also.
         */
         {
                 std::cout << "Total distance objects are: " << count << std::endl;

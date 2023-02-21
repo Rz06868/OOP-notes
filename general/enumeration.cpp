@@ -1,8 +1,7 @@
 #include <iostream>
 
 /*
-ennum is a user defined type for limited range of values,
-where values can be called from their names.
+ennum is a user defined type for limited range of values, where values can be called from their names.
 */
 
 enum {
@@ -17,60 +16,60 @@ enum {
 
 int main() {
         // giving each day of the week a number
-        std::cout << 0 << " : Monday" << std::endl;
-        std::cout << 1 << " : Tuesday" << std::endl;
-        std::cout << 2 << " : Wednesday" << std::endl;
-        std::cout << 3 << " : Thursday" << std::endl;
-        std::cout << 4 << " : Friday" << std::endl;
-        std::cout << 5 << " : Saturday" << std::endl;
-        std::cout << 6 << " : Sunday" << std::endl;
+        std::cout << 0 << " : Monday\n"
+                  << 1 << " : Tuesday\n"
+                  << 2 << " : Wednesday\n"
+                  << 3 << " : Thursday\n"
+                  << 4 << " : Friday\n"
+                  << 5 << " : Saturday\n"
+                  << 6 << " : Sunday\n";
 
         int choice;
         // asking user for the their choice and printing it
         std::cin >> choice;
         if (choice == 0)
-                std::cout << "Monday" << std::endl;
+                std::cout << "Monday\n";
         else if (choice == 1)
-                std::cout << "Tuesday" << std::endl;
+                std::cout << "Tuesday\n";
         else if (choice == 2)
-                std::cout << "Wednesday" << std::endl;
+                std::cout << "Wednesday\n";
         else if (choice == 3)
-                std::cout << "Thursday" << std::endl;
+                std::cout << "Thursday\n";
         else if (choice == 4)
-                std::cout << "Friday" << std::endl;
+                std::cout << "Friday\n";
         else if (choice == 5)
-                std::cout << "Saturday" << std::endl;
+                std::cout << "Saturday\n";
         else if (choice == 6)
-                std::cout << "Sunday" << std::endl;
+                std::cout << "Sunday\n";
 
         // very same situation can be delat with enum data type
 
-        std::cout << std::endl << "enum situation" << std::endl << std::endl;
+        std::cout << std::endl << "enum situation\n\n";
 
-        std::cout << MONDAY << " : Monday" << std::endl
-                  << TUESDAY << " : Tuesday" << std::endl
-                  << WEDNESDAY << " : Wednesday" << std::endl
-                  << THURSDAY << " : Thursday" << std::endl
-                  << FRIDAY << " : Friday" << std::endl
-                  << SATURDAY << " : Saturday" << std::endl
-                  << SUNDAY << " : Sunday" << std::endl;
+        std::cout << MONDAY << " : Monday\n"
+                  << TUESDAY << " : Tuesday\n"
+                  << WEDNESDAY << " : Wednesday\n"
+                  << THURSDAY << " : Thursday\n"
+                  << FRIDAY << " : Friday\n"
+                  << SATURDAY << " : Saturday\n"
+                  << SUNDAY << " : Sunday\n";
 
         // asking user for the their choice and printing it
         std::cin >> choice;
         if (choice == MONDAY)
-                std::cout << "Monday" << std::endl;
+                std::cout << "Monday\n";
         else if (choice == TUESDAY)
-                std::cout << "Tuesday" << std::endl;
+                std::cout << "Tuesday\n";
         else if (choice == WEDNESDAY)
-                std::cout << "Wednesday" << std::endl;
+                std::cout << "Wednesday\n";
         else if (choice == THURSDAY)
-                std::cout << "Thursday" << std::endl;
+                std::cout << "Thursday\n";
         else if (choice == FRIDAY)
-                std::cout << "Friday" << std::endl;
+                std::cout << "Friday\n";
         else if (choice == SATURDAY)
-                std::cout << "Saturday" << std::endl;
+                std::cout << "Saturday\n";
         else if (choice == SUNDAY)
-                std::cout << "Sunday" << std::endl;
+                std::cout << "Sunday\n";
 
         return 0;
 }

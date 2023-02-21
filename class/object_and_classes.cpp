@@ -84,8 +84,7 @@ int main() {
 }
 
 /*
-if you wnat only to compile the file and not to gain the execution file
-write the compilation command as
+if you wnat only to compile the file and not to gain the execution file write the compilation command as
 
 g++ -c <filename>.cpp
 

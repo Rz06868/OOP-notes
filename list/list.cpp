@@ -10,22 +10,18 @@ int main() {
         L.push_back(1);
 
         for (auto v : L) std::cout << v << " ";
-        std::cout << std::endl
-                  << std::endl
-                  << "The last element of the list is " << L.back() << std::endl;
+        std::cout << "\n\nThe last element of the list is " << L.back() << std::endl;
         L.pop_back();
 
-        std::cout << std::endl
-                  << "The front element of the list is " << L.front() << std::endl
-                  << std::endl;
+        std::cout << "\nThe front element of the list is " << L.front() << std::endl << std::endl;
         L.pop_front();
 
         for (auto v : L) std::cout << v << " ";
         std::cout << std::endl << std::endl;
 
         /*
-        itterator is a pointer to elements in the list. to print it out
-        we need to derefrence it. it can also be overloaded by ++ operator.
+        itterator is a pointer to elements in the list. to print it out we need to derefrence it. it can also be
+        overloaded by ++ operator.
 
         same for loop can be written with auto
 

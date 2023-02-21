@@ -20,15 +20,12 @@ int main() {
         int x = 5;
 
         /*
-        here y is not an auto type variable. the IDE would show the type of y
-        when you hover the mouse pointer over it.
+        here y is not an auto type variable. the IDE would show the type of y when you hover the mouse pointer over it.
 
-        auto types simply checks what type of value is been stored in the variable.
-        in case of y, 9 is an int type which implies that the y is an int type
-        variable.
+        auto types simply checks what type of value is been stored in the variable. in case of y, 9 is an int type which
+        implies that the y is an int type variable.
 
-        in case of z, 2.6 is a double type which implies that the z is a double
-        type variable.
+        in case of z, 2.6 is a double type which implies that the z is a double type variable.
 
         this can be easily varified by hovering mouse pointer over each variable.
         */

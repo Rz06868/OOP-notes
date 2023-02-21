@@ -38,8 +38,7 @@ int main() {
                 S.push(13);
                 S.push(31);
         } catch (Stack::Range r) {
-                std::cout << "Error: can not push into array. out of array bound at index "
-                          << r.value << std::endl;
+                std::cout << "Error: can not push into array. out of array bound at index " << r.value << std::endl;
         }
 
         try {
@@ -51,9 +50,8 @@ int main() {
                 S.pop();
                 S.pop();
         } catch (Stack::Range r) {
-                std::cout << "Error: can not pop out of array. array is empty. out of "
-                             "array bound at index "
-                          << r.value << std::endl;
+                std::cout << "Error: can not pop out of array. array is empty. out of array bound at index " << r.value
+                          << std::endl;
         }
         return 0;
 }

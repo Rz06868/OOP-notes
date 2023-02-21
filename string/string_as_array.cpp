@@ -11,8 +11,7 @@ int main() {
         char str[10] = "Hello";
 
         /*
-        in the last of every char array, there is a null char.
-        the ascii value of null char is 0
+        in the last of every char array, there is a null char. the ascii value of null char is 0
         */
 
         std::cout << str[5] << std::endl;  // it will print as a blank
@@ -23,8 +22,7 @@ int main() {
         std::cout << std::endl;
 
         /*
-        we can also make string by assiging values to char array.
-        when the string ends assign 0 to next element.
+        we can also make string by assiging values to char array. when the string ends assign 0 to next element.
         */
 
         char str1[10];
@@ -37,9 +35,8 @@ int main() {
         std::cout << str1 << std::endl;
 
         /*
-        this simple task can also be acheived by string.h file.
-        it contains a function strcpy(str1, str2).
-        it copies values of str2 to str1.
+        this simple task can also be acheived by string.h file. it contains a function strcpy(str1, str2). it copies
+        values of str2 to str1.
         */
 
         char str2[10] = "abc";
@@ -52,13 +49,10 @@ int main() {
         std::cout << "str1 after being copied: " << str1 << std::endl << std::endl;
 
         /*
-        the problem with cahr array is its limited flexibility.
-        arrays can not be added nor they can be manipulated easily.
-        Also they can not be equated to another array.
+        the problem with cahr array is its limited flexibility. arrays can not be added nor they can be manipulated
+        easily. Also they can not be equated to another array.
 
-        std::string class
-        There is no need to put size in it.
-        string manages it by its own.
+        std::string class There is no need to put size in it. string manages it by its own.
         */
 
         std::string s1 = "Today";     // initialization
@@ -67,7 +61,7 @@ int main() {
         s3 = "Sunnday";  // assignment
 
         if (s3 == "Sunday") {
-                std::cout << "Its a fun day" << std::endl;
+                std::cout << "Its a fun day\n";
         }
 
         s3 = s1 + " is " + s3;

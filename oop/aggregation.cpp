@@ -1,6 +1,5 @@
 /*
-We choose aggregation in a situation when there
-is "has-a" relationship among classes.
+We choose aggregation in a situation when there is "has-a" relationship among classes.
 
 Hotel has Rooms.
 Computer has CPU.

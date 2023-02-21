@@ -6,9 +6,8 @@ class Distance {
         Distance(int f, int i) : feet(f), inches(i) {}
 
         /*
-        Compiler can not convert a user-defined object into basic type at its own.
-        To convert object to any type, we overload that conversion type.
-        the syntax is simple,
+        Compiler can not convert a user-defined object into basic type at its own. To convert object to any type, we
+        overload that conversion type. the syntax is simple,
 
         operator <conversion type name>()
         {
@@ -24,8 +23,7 @@ int main() {
         Distance d1 = {2, 3};
         Distance d2 = {7, 4};
         /*
-        Distance type objects can not be directly converted to float.
-        this ambuguity make compiler to generate error.
+        Distance type objects can not be directly converted to float. this ambuguity make compiler to generate error.
         */
         float length = d1;
         float width  = d2;

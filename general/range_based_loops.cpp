@@ -5,25 +5,22 @@ int main() {
 
         std::cout << "array[] = {";
         /*
-        range based loops works same as we do in python. for example to itterate
-        over the elements of a list number by using a dumy variable n we write
+        range based loops works same as we do in python. for example to itterate over the elements of a list number by
+        using a dumy variable n we write
 
         for n in number:
 
         in cpp the syntax goes as,
 
-        for (<data-type of elements> <name of dumy variable>: <object on which
-        itterating>)
+        for (<data-type of elements> <name of dumy variable>: <object on which itterating>)
 
-        for below example, array is an int type array, so the type of dumy
-        variable is also int.
+        for below example, array is an int type array, so the type of dumy variable is also int.
         */
         for (int arrayElement : array) std::cout << arrayElement << ", ";
-        std::cout << "}" << std::endl;
+        std::cout << "}\n";
 
         /*
-        if you want to cahnge the values in the array inside the loop,
-        then pass dumy variable by reference.
+        if you want to cahnge the values in the array inside the loop, then pass dumy variable by reference.
         */
 
         std::cout << "array[] = {";
@@ -31,6 +28,6 @@ int main() {
                 arrayElement = 0;
                 std::cout << arrayElement << ", ";
         }
-        std::cout << "}" << std::endl;
+        std::cout << "}\n";
         return 0;
 }

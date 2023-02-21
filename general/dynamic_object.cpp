@@ -8,9 +8,7 @@ class Distance {
         Distance() : feet(0), inches(0) {}
         Distance(int f, int i) : feet(f), inches(i) {}
 
-        void show() {
-                std::cout << "The distance is: " << feet << "'" << inches << "\"" << std::endl;
-        }
+        void show() { std::cout << "The distance is: " << feet << "'" << inches << "\"\n"; }
 };
 
 int main() {
